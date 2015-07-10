@@ -1,0 +1,16 @@
+%h2
+%form(role="form" ng-init="habitForm = {}" novalidate)
+  %label{:for => "habitName"} Name
+  %input(type="text" id="habitName" ng-model="habit.name" ng-maxlength="50" autofocus required)
+  %br
+  %label{:for => "habitSummary"} Summary
+  %input(type="text" id="habitSummary" ng-model="habit.summary" ng-maxlength="100" required)
+  %br
+  %label{:for => "habitDescription"} Description
+  %input(type="text" id="habitDescription" ng-model="habit.description" required)
+  %br
+  %button.save(ng-click="save()" ng-disabled="habitForm.$invalid") Save
+  %span
+  %button.delete(ng-click="delete()") Delete
+  %span
+  %button.back(ui-sref="habits") Close

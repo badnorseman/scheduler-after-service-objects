@@ -1,0 +1,32 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('profiles', {
+        url: '/profiles',
+        abstract: true,
+        templateUrl: '<%= asset_path("profiles/detail.html.haml") %>',
+        controller: 'ProfileReadCtrl'
+      })
+      .state('profiles.detail', {
+        url: '',
+        views: {
+          'loginInfo': {
+            templateUrl: '<%= asset_path("profiles/login_info.html.haml") %>',
+            controller: 'PasswordUpdateCtrl'
+          },
+          'personInfo': {
+            templateUrl: '<%= asset_path("profiles/person_info.html.haml") %>',
+            controller: 'ProfileUpdateCtrl'
+          },
+          'addressInfo': {
+            templateUrl: '<%= asset_path("profiles/address_info.html.haml") %>',
+            controller: 'ProfileUpdateCtrl'
+          }
+        }
+      });
+      // .state('profileCreate', {
+      //   url: '/profile_create',
+      //   templateUrl: '<%= asset_path("registrations/profile_create.html.haml") %>',
+      //   controller: 'ProfileCreateCtrl'
+      // });
+}]);

@@ -1,0 +1,14 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('habits', {
+        url: '/habits',
+        templateUrl: '<%= asset_path("habits/list.html.haml") %>',
+        controller: 'HabitListCtrl'
+      })
+      .state('habits.detail', {
+        url: '/:id',
+        templateUrl: '<%= asset_path("habits/detail.html.haml") %>',
+        controller: 'HabitDetailCtrl'
+      });
+}]);

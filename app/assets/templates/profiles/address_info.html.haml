@@ -1,0 +1,28 @@
+%form(role="form" ng-init="addressInfoForm = {}" novalidate)
+  %label{:for => "profileCompany"} Company
+  %input(type="text" id="profileCompany" ng-model="profile.company")
+  %br
+  %label{:for => "profileAddress1"} Street Address
+  %input(type="text" id="profileAddress1" ng-model="profile.address1")
+  %br
+  %label{:for => "profileAddress2"}
+  %input(type="text" id="profileAddress2" ng-model="profile.address2")
+  %br
+  %label{:for => "profileCity"} City
+  %input(type="text" id="profileCity" ng-model="profile.city" type="text")
+  %br
+  %label{:for => "profileStateOrProvince"} State or Province
+  %input(type="text" id="profileStateOrProvince" ng-model="profile.state_province")
+  %br
+  %label{:for => "profilePostalCode"} Postal Code
+  %input(type="text" id="profilePostalCode" ng-model="profile.postal_code")
+  %br
+  %label{:for => "profileCountry"} Country
+  %input(type="text" id="profileCountry" ng-model="profile.country")
+  %br
+  %label{:for => "profilePhoneNumber"} Phone Number
+  %input(type="text" id="profilePhoneNumber" ng-model="profile.phone_number")
+  %br
+  %button.save(ng-click="updateProfile()" ng-disabled="addressInfoForm.$invalid") Save
+  %span
+  %button.back(ui-sref="dashboard") Close

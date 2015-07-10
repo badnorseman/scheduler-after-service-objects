@@ -1,0 +1,14 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('products', {
+        url: '/products',
+        templateUrl: '<%= asset_path("products/list.html.haml") %>',
+        controller: 'ProductListCtrl'
+      })
+      .state('products.detail', {
+        url: '/:id',
+        templateUrl: '<%= asset_path("products/detail.html.haml") %>',
+        controller: 'ProductDetailCtrl'
+      });
+}]);

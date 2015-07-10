@@ -1,0 +1,14 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('exerciseDescriptions', {
+        url: '/exercise_descriptions',
+        templateUrl: '<%= asset_path("exercise_descriptions/list.html.haml") %>',
+        controller: 'ExerciseDescriptionListCtrl'
+      })
+      .state('exerciseDescriptions.detail', {
+        url: '/:id',
+        templateUrl: '<%= asset_path("exercise_descriptions/detail.html.haml") %>',
+        controller: 'ExerciseDescriptionDetailCtrl'
+      });
+}]);

@@ -1,0 +1,17 @@
+module.directive('menuItem', ['$compile',
+  function($compile) {
+    return {
+      replace: 'true',
+      restrict: 'A',
+      scope: {
+        item: '=menuItem'
+      },
+      templateUrl: '<%= asset_path("menus/menu_item.html.haml") %>',
+      link: function(scope, element, attrs) {
+        if (scope.item.click) {
+          element.find('a').attr('ng-click', 'item.click()');
+        }
+        $compile(element.contents())(scope);
+      }
+    };
+}]);

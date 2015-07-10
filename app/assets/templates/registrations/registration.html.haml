@@ -1,0 +1,17 @@
+.registration
+  %form(role="form" ng-init="registrationForm = {}" novalidate)
+    %br
+    %button#facebook(ng-click="submitRegistrationOAuth('facebook')") Sign up with Facebook
+    %br
+    %input(type="text" id="firstName" ng-model="registration.first_name" placeholder="First Name" required)
+    %br
+    %input(type="text" id="lastName" ng-model="registration.last_name" placeholder="Last Name" required)
+    %br
+    %input(type="email" id="email" ng-model="registration.email" placeholder="Email" required)
+    %br
+    %input(type="password" id="password" ng-model="registration.password" placeholder="Password" required)
+    %br
+    %input(type="password" id="passwordConfirmation" ng-model="registration.password_confirmation" placeholder="Confirm password" required)
+    %br
+    %button(type="submit" ng-click="submitRegistration()" ng-disabled="registrationForm.$invalid") Sign up
+    %br

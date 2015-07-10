@@ -1,0 +1,9 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('registration', {
+        url: '/registration/:roleId',
+        templateUrl: '<%= asset_path("registrations/registration.html.haml") %>',
+        controller: 'RegistrationCtrl'
+      });
+}]);

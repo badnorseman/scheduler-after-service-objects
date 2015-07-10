@@ -1,0 +1,13 @@
+module.config(function($stateProvider) {
+  $stateProvider
+    .state('exercisePlans', {
+      url: '/exercise_plans',
+      templateUrl: '<%= asset_path("exercise_plans/list.html.haml") %>',
+      controller: 'ExercisePlanListCtrl'
+    })
+    .state('exercisePlans.detail', {
+      url: '/:id',
+      templateUrl: '<%= asset_path("exercise_plans/detail.html.haml") %>',
+      controller: 'ExercisePlanDetailCtrl'
+    });
+});

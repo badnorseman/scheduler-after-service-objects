@@ -1,0 +1,40 @@
+%h2
+%form(role="form" ng-init="exerciseDescriptionForm = {}" novalidate)
+  %label{:for => "exerciseDescriptionName"} Name
+  %input(type="text" id="exerciseDescriptionName" ng-model="exerciseDescription.name" ng-maxlength="50" autofocus required)
+  %br
+  %label{:for => "exerciseDescriptionShortName"} Name for Mobile
+  %input(type="text" id="exerciseDescriptionShortName" ng-model="exerciseDescription.short_name_for_mobile" ng-maxlength="100" required)
+  %br
+  %label{:for => "exerciseDescriptionDescription"} Description
+  %input(type="text" id="exerciseDescriptionDescription" ng-model="exerciseDescription.description" ng-maxlength="255" required)
+  %br
+  %label{:for => "exerciseDescriptionUrl"} Video Url
+  %input(type="url" id="exerciseDescriptionUrl" ng-model="exerciseDescription.video_url" ng-maxlength="100")
+  %br
+  %label{:for => "exerciseDescriptionDistance"} Distance
+  %input(type="checkbox" id="exerciseDescriptionDistance" ng-model="exerciseDescription.distance")
+  %br
+  %label{:for => "exerciseDescriptionDuration"} Duration
+  %input(type="checkbox" id="exerciseDescriptionDuration" ng-model="exerciseDescription.duration")
+  %br
+  %label{:for => "exerciseDescriptionLoad"} Load
+  %input(type="checkbox" id="exerciseDescriptionLoad" ng-model="exerciseDescription.load")
+  %span
+  %label{:for => "exerciseDescriptionLoadUnilateral"} Unilateral Load
+  %input(type="checkbox" id="exerciseDescriptionLoadUnilateral" ng-model="exerciseDescription.unilateral_loading")
+  %br
+  %label{:for => "exerciseDescriptionRepetition"} Repetition
+  %input(type="checkbox" id="exerciseDescriptionRepetition" ng-model="exerciseDescription.repetition")
+  %span
+  %label{:for => "exerciseDescriptionRepetitionUnilateral"} Unilateral Repetition
+  %input(type="checkbox" id="exerciseDescriptionRepetitionUnilateral" ng-model="exerciseDescription.unilateral_execution")
+  %br
+  %label{:for => "exerciseDescriptionTempo"} Tempo
+  %input(type="text" id="exerciseDescriptionTempo" ng-model="exerciseDescription.tempo" ng-maxlength="8")
+  %br
+  %button.save(ng-click="save()" ng-disabled="exerciseDescriptionForm.$invalid") Save
+  %span
+  %button.delete(ng-click="delete()") Delete
+  %span
+  %button.back(ui-sref="exerciseDescriptions") Close

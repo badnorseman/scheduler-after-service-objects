@@ -1,0 +1,131 @@
+.authentication,
+.registration {
+  width:100%;
+}
+
+.dashboard,
+.detail {
+  background-color:$white;
+  color:$grey;
+  border:none;
+  display:block;
+}
+
+.list,
+.list a {
+  background-color:$grey;
+  color:$grey-light;
+}
+
+.authentication form,
+.registration form,
+#role-to-user {
+  background-color:$grey-light;
+  margin:100px auto;
+  width:300px;
+}
+
+.authentication form input[type="email"],
+.authentication form input[type="password"],
+.authentication form button[type="submit"],
+.detail form button[type="submit"],
+.registration form input[type="email"],
+.registration form input[type="password"],
+.registration form input[type="text"],
+.registration form button[type="submit"] {
+  border:none;
+  color:$white;
+  display:block;
+  height:3em;
+  margin:0 auto;
+  padding:10px;
+  width:90%;
+}
+
+.authentication form input[type="email"],
+.authentication form input[type="password"],
+.registration form input[type="email"],
+.registration form input[type="password"],
+.registration form input[type="text"] {
+  background-color:$grey;
+}
+
+.authentication form button[type="submit"],
+.detail form button[type="submit"],
+.registration form button[type="submit"] {
+  background-color:$well_done_green;
+}
+
+.authentication form a,
+.registration form a {
+  background-color:$grey-light;
+  color:$grey-dark;
+  float:right;
+}
+
+.authentication form a:hover,
+.registration form a:hover  {
+  color:$grey-dark;
+  text-decoration:none;
+}
+
+#reset-password-header,
+#reset-password-text {
+  color:$grey-dark;
+}
+
+#reset-password-header {
+  text-align:center;
+}
+
+#reset-password-text {
+  margin-left:15px;
+}
+
+.detail form input[type="email"],
+.detail form input[type="password"],
+.detail form input[type="text"] {
+  border:1px solid $grey-light;
+  height:3em;
+  margin:10px;
+  padding:10px;
+}
+
+.detail form input[type="email"],
+.detail form input[type="password"] {
+  width:20em;
+}
+
+.list a:hover,
+#forgot-password:hover {
+  cursor:pointer;
+  text-decoration:none;
+}
+
+#forgot-password {
+  border:none;
+  display:block;
+  height:2em;
+  padding-right:15px;
+  text-align:right;
+  width:100%;
+}
+
+#user {
+  float:right;
+  height:3em;
+  margin-top:20px;
+}
+
+::-webkit-input-placeholder {
+  color:$grey-lighter;
+}
+:-moz-input-placeholder {
+  color:$grey-lighter;
+}
+:-o-input-placeholder {
+  color:$grey-lighter;
+}
+:-ms-input-placeholder {
+  color:$grey-lighter;
+}

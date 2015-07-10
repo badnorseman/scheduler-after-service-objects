@@ -1,0 +1,10 @@
+.menubar
+  %a(href="#" ui-sref="registration({roleId:3})" ng-show="!signedIn")<
+    %span
+      Sign Up
+  %a(href="#" ui-sref="login" ng-show="!signedIn")<
+    %span
+      Log In
+  %a#list-as-trainer(href="#" ui-sref="registration({roleId:2})" ng-show="!signedIn")<
+    %span
+      List As Trainer

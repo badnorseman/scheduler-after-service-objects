@@ -1,0 +1,14 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('dashboardUser', {
+        url: '/dashboard_user',
+        templateUrl: '<%= asset_path("dashboards/dashboard_user.html.haml") %>',
+        controller: 'DashboardUserCtrl'
+      })
+      .state('dashboardCoach', {
+        url: '/dashboard_coach',
+        templateUrl: '<%= asset_path("dashboards/dashboard_coach.html.haml") %>',
+        controller: 'DashboardCoachCtrl'
+      });
+}]);

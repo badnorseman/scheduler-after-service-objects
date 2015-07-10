@@ -1,0 +1,34 @@
+@import "fitbird/colors";
+@import "fitbird/bootstrap";
+@import "fitbird/buttons";
+@import "fitbird/facebook";
+@import "fitbird/fonts";
+@import "fitbird/icons";
+@import "fitbird/forms";
+@import "fitbird/menus";
+
+html, body {min-height:100%;}
+
+body {
+  font-family:$fonts;
+  background-color:$white;
+  color:$grey;
+}
+
+label {
+  font-weight:normal;
+}
+
+.clearfix:after,
+.clearfix:before {
+  content:" ";
+  display:table;
+}
+
+.clearfix:after {
+  clear:both;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display:none !important;
+}

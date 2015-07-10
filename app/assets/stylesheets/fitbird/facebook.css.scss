@@ -1,0 +1,17 @@
+#facebook {
+  background-color:$facebook;
+  border:none;
+  color:$white;
+  display:block;
+  height:3em;
+  margin:0 auto;
+  text-align:center;
+  width:90%;
+}
+
+#facebook:before {
+  position:relative;
+  font-family:FontAwesome;
+  content:"\f09a";
+  margin-right:40px;
+}

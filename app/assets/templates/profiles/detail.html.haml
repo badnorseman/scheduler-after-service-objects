@@ -1,0 +1,18 @@
+.row
+  .col-xs-12.detail
+    %accordion
+      %accordion-group(is-open="personInfo.isOpen")
+        %accordion-heading
+          %i(ng-class="{'fa fa-chevron-down': personInfo.isOpen, 'fa fa-chevron-right': !personInfo.isOpen}")
+          Personal Info
+        %div(ui-view="personInfo")
+      %accordion-group(is-open="loginInfo.isOpen")
+        %accordion-heading
+          %i(ng-class="{'fa fa-chevron-down': loginInfo.isOpen, 'fa fa-chevron-right': !loginInfo.isOpen}")
+          Login Info
+        %div(ui-view="loginInfo")
+      %accordion-group(is-open="addressInfo.isOpen")
+        %accordion-heading
+          %i(ng-class="{'fa fa-chevron-down': addressInfo.isOpen, 'fa fa-chevron-right': !addressInfo.isOpen}")
+          Address Info
+        %div(ui-view="addressInfo")

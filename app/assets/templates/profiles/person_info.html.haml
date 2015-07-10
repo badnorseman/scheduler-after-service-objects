@@ -1,0 +1,30 @@
+%form(role="form" ng-init="personInfoForm = {}" novalidate)
+  %label{:for => "profileFirstName"} First Name
+  %input(type="text" id="profileFirstName" ng-model="profile.first_name" required)
+  %span
+  %label{:for => "profileLastName"} Last Name
+  %input(type="text" id="profileLastName" ng-model="profile.last_name" required)
+  %br
+  %label{:for => "profileGender"} Gender
+  %input(type="text" id="profileGender" ng-model="profile.gender")
+  %span.fa.fa-male
+  %span.fa.fa-female
+  %br
+  %label{:for => "profileBirthDay"} Date of Birth (dd/mm/yyyy)
+  %input(type="text" id="profileBirthDay" ng-model="profile.birth_date")
+  %br
+  %label{:for => "profileHeight"} Height (cm)
+  %input(type="text" id="profileHeight" ng-model="profile.height")
+  %span
+  %label{:for => "profileWeight"} Weight (kilo)
+  %input(type="text" id="profileWeight" ng-model="profile.weight")
+  %br
+  %label{:for => "profileTrainingLevel"} Experience of Training
+  %input(type="text" id="profileTrainingLevel" ng-model="profile.training_level")
+  %span
+  %label{:for => "profileTrainingGoal"} Goal of Training
+  %input(type="text" id="profileTrainingGoal" ng-model="profile.training_goal")
+  %br
+  %button.save(ng-click="updateProfile()" ng-disabled="personInfoForm.$invalid") Save
+  %span
+  %button.back(ui-sref="dashboard") Close

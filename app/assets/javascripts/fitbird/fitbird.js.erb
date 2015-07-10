@@ -1,0 +1,43 @@
+var module = angular.module('fitbird', [
+  'ipCookie',
+  'ngMessages',
+  'ngResource',
+  'ng-token-auth',
+  'ui.bootstrap',
+  'ui.router',
+  'format-number'
+]);
+
+module.config(['$urlRouterProvider',
+  function($urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+}]);
+
+module.config(['$authProvider',
+  function($authProvider) {
+    $authProvider.configure({
+      passwordResetSuccessUrl: 'http://localhost:3000/#/password_update'
+    });
+}]);
+
+module.config(['formatNumberProvider',
+function(formatNumberProvider) {
+  formatNumberProvider.setDefaultOptions({
+    preventInvalidInput: true,
+    min: 0,
+    maxDecimals: 2
+  });
+}]);
+
+// Enables browser history that comes with html5
+// module.config(['$locationProvider', function($locationProvider) {
+//   $locationProvider.html5Mode(true);
+// }]);
+
+// module.run(['$location', '$rootScope',
+//  function($location, $rootScope) {
+//    $rootScope.$on('auth:login-success', function(ev, user) {
+//      console.log('login-success', user);
+//      $location.path('/welcome');
+//    });
+// }]);

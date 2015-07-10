@@ -1,0 +1,14 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('paymentPlans', {
+        url: '/payment_plans',
+        templateUrl: '<%= asset_path("payment_plans/list.html.haml") %>',
+        controller: 'PaymentPlanListCtrl'
+      })
+      .state('paymentPlans.detail', {
+        url: '/:id',
+        templateUrl: '<%= asset_path("payment_plans/detail.html.haml") %>',
+        controller: 'PaymentPlanDetailCtrl'
+      });
+}]);

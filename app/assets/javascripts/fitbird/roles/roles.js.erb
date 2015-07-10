@@ -1,0 +1,14 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('roles', {
+        url: '/roles',
+        templateUrl: '<%= asset_path("roles/list.html.haml") %>',
+        controller: 'RoleListCtrl'
+      })
+      .state('roles.detail', {
+        url: '/:id',
+        templateUrl: '<%= asset_path("roles/detail.html.haml") %>',
+        controller: 'RoleDetailCtrl'
+      });
+}]);

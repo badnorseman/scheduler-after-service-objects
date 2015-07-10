@@ -1,0 +1,9 @@
+.dropdown
+  %ul
+    %li
+      %button.dropdown-toggle
+        %span.sr-only Toggle dropdown
+        %span.fa.fa-bars.fa-2x
+
+      %ul(role="menu")
+        %li(ng-repeat="item in menu" menu-item="item")

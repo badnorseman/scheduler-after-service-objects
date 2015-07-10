@@ -1,0 +1,9 @@
+module.config(['$stateProvider',
+  function($stateProvider) {
+    $stateProvider
+      .state('users', {
+        url: '/users',
+        templateUrl: '<%= asset_path("users/list.html.haml") %>',
+        controller: 'UserListCtrl'
+      });
+}]);
