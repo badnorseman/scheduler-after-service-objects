@@ -22,11 +22,6 @@ module Fitbird
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
-    # Enable Devise to receive JSON requests.
-    config.to_prepare do
-      DeviseController.respond_to :json
-    end
-
     # Compile images in assets.
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end

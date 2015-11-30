@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.0'
+gem 'rails'
 # Add jquery to the JavaScript library
 gem 'jquery-rails'
 # Monitor Ruby Gems are out-of-date or vulnerable
 gem 'gemsurance'
-# Authorize the user sign up and the user log in
 # Memcached store cashe on server
 gem 'dalli'
 # Use PostgreSQL as database
